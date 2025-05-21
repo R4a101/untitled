@@ -3,184 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>基本設計書 IS22-IMS-001(01)</title>
-    <style>
-        body {
-            font-family: 'Meiryo', 'MS PGothic', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .page {
-            width: 210mm; /* A4 width */
-            min-height: 297mm; /* A4 height */
-            padding: 20mm 15mm;
-            margin: 10mm auto;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            position: relative;
-            box-sizing: border-box;
-        }
-        .page-header {
-            position: absolute;
-            top: 10mm;
-            right: 15mm;
-            font-size: 0.9em;
-            color: #555;
-        }
-        .page-footer {
-            position: absolute;
-            bottom: 10mm;
-            left: 15mm;
-            right: 15mm;
-            font-size: 0.9em;
-            color: #555;
-            display: flex;
-            justify-content: space-between;
-        }
-        .page-footer .copyright {
-            text-align: left;
-        }
-        .page-footer .page-info {
-            text-align: center;
-            flex-grow: 1;
-        }
-        .page-footer .doc-title-footer {
-            text-align: right;
-        }
-
-
-        h1, h2, h3, h4 {
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-        }
-        h1 {
-            font-size: 2em;
-            text-align: center;
-            margin-bottom: 1em;
-        }
-        h2 {
-            font-size: 1.5em;
-            border-bottom: 2px solid #333;
-            padding-bottom: 0.3em;
-            margin-top: 1.5em;
-        }
-        h3 {
-            font-size: 1.2em;
-            margin-top: 1em;
-        }
-        p {
-            margin-bottom: 0.8em;
-        }
-        .center {
-            text-align: center;
-        }
-        .right {
-            text-align: right;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 1em;
-        }
-        th, td {
-            border: 1px solid #333;
-            padding: 8px;
-            text-align: left;
-            vertical-align: top;
-        }
-        th {
-            background-color: #f2f2f2;
-            font-weight: bold;
-        }
-        .approval-table th, .approval-table td {
-            height: 50px; /* 捺印スペース用 */
-            text-align: center;
-            vertical-align: middle;
-        }
-        .approval-table th {
-            width: 20%;
-        }
-        .toc ol {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .toc li {
-            margin-bottom: 0.5em;
-            display: flex;
-            justify-content: space-between;
-        }
-        .toc .toc-title {
-            margin-right: 0.5em;
-        }
-        .toc .toc-dots {
-            flex-grow: 1;
-            border-bottom: 1px dotted #333;
-            position: relative;
-            bottom: 0.3em; /* Align dots nicely */
-            margin: 0 0.5em;
-        }
-        .toc .toc-page-number {
-            margin-left: 0.5em;
-        }
-
-        .function-def-table th {
-            width: 25%; /* 機能定義表の項目列の幅 */
-            background-color: #e9e9e9;
-        }
-        .function-def-table td ul, .function-def-table td ol {
-            padding-left: 20px;
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-        .note {
-            font-size: 0.9em;
-            color: #555;
-        }
-        ul, ol {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 0.3em;
-        }
-
-        .section-title {
-            margin-bottom: 20px;
-        }
-
-        .document-id-header {
-            text-align: right;
-            margin-bottom: 10px;
-        }
-        .footer-center {
-            text-align: center;
-        }
-        .sub-item {
-            margin-left: 20px;
-        }
-    </style>
 </head>
 <body>
 
-<!-- Page 1 -->
-<div class="page">
-    <p class="center" style="margin-top: 50px;">医療機関向け</p>
-    <h1 style="margin-top: 10px; margin-bottom: 10px;">医師・受付・患者管理システム</h1>
-    <h2 class="center" style="border-bottom: none; font-size: 1.8em; margin-bottom: 30px;">基本設計書</h2>
-    <p class="center">文書番号: IS22-IMS-001(01)</p>
-
-    <div style="margin-top: 150px; text-align: right;">
-        <p>令和2年 4月13日</p>
-        <p>株式会社ABC</p>
-        <p>開発事業部</p>
-    </div>
-
-    <table class="approval-table" style="margin-top: 50px; position: absolute; bottom: 50mm; width: calc(100% - 30mm);">
+<!-- OCR Page 1 -->
+<div>
+    <p>医療機関向け</p>
+    <h1>医師・受付・患者管理システム</h1>
+    <h2>基本設計書</h2>
+    <p>文書番号:IS22-IMS-001(01)</p>
+    <p>令和2年 4月13日</p>
+    <p>株式会社ABC</p>
+    <p>開発事業部</p>
+    <table>
+        <caption>ABC 署名/捺印</caption>
         <thead>
-        <tr>
-            <td colspan="4" style="border: none; text-align: left; padding-bottom: 5px;">ABC 署名/捺印</td>
-        </tr>
         <tr>
             <th>承認</th>
             <th>品証查閱</th>
@@ -190,19 +27,20 @@
         </thead>
         <tbody>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
         </tr>
         </tbody>
     </table>
 </div>
+<hr>
 
-<!-- Page 2 -->
-<div class="page">
-    <div class="page-header">IS22-IMS-001(01)</div>
-    <h2 class="section-title center">改訂履歴</h2>
+<!-- OCR Page 2 -->
+<div>
+    <p>IS22-IMS-001(01)</p>
+    <h2>改訂履歴</h2>
     <table>
         <thead>
         <tr>
@@ -235,66 +73,53 @@
             <td></td>
             <td></td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
         </tbody>
     </table>
-    <div class="page-footer">
-        <span class="copyright">© 2020 HICS</span>
-        <span class="page-info">改訂履歴</span>
-        <span></span>
-    </div>
+    <p>© 2020 HICS</p>
+    <p>改訂履歴</p>
 </div>
+<hr>
 
-<!-- Page 3 -->
-<div class="page">
-    <div class="page-header">IS22-IMS-001(01)</div>
-    <h1 style="font-size: 1.8em; text-align: left; margin-bottom: 20px;">基本設計書</h1>
-    <h2 class="section-title center">目 次</h2>
-    <div class="toc">
-        <ol>
-            <li><span class="toc-title">1. システム構築方針</span><span class="toc-dots"></span><span class="toc-page-number">4</span></li>
-            <li><span class="toc-title">2. 制約条件・前提条件</span><span class="toc-dots"></span><span class="toc-page-number">4</span></li>
-            <li><span class="toc-title">3. システム概要</span><span class="toc-dots"></span><span class="toc-page-number">4</span></li>
-            <li><span class="toc-title">4. システム構成</span><span class="toc-dots"></span><span class="toc-page-number">5</span></li>
-            <li><span class="toc-title">5. 機能設計</span><span class="toc-dots"></span><span class="toc-page-number">6</span></li>
-            <li><span class="toc-title">6. 画面設計</span><span class="toc-dots"></span><span class="toc-page-number">16</span></li>
-            <li><span class="toc-title">7. 帳票設計</span><span class="toc-dots"></span><span class="toc-page-number">17</span></li>
-            <li><span class="toc-title">8. データベース設計※</span><span class="toc-dots"></span><span class="toc-page-number">17</span></li>
-            <li><span class="toc-title">9. コード設計</span><span class="toc-dots"></span><span class="toc-page-number">17</span></li>
-            <li><span class="toc-title">10. 運用設計</span><span class="toc-dots"></span><span class="toc-page-number">18</span></li>
-            <li><span class="toc-title">11. 信頼性設計※</span><span class="toc-dots"></span><span class="toc-page-number">18</span></li>
-            <li><span class="toc-title">12. 性能設計※</span><span class="toc-dots"></span><span class="toc-page-number">18</span></li>
-            <li><span class="toc-title">13. 保守設計※</span><span class="toc-dots"></span><span class="toc-page-number">18</span></li>
-        </ol>
-    </div>
-    <p class="note" style="margin-top: 30px;">※のついている項目は省略している</p>
-    <div class="page-footer">
-        <span class="copyright">© 2020 HICS</span>
-        <span class="page-info">目次</span>
-        <span></span>
-    </div>
+<!-- OCR Page 3 -->
+<div>
+    <p>IS22-IMS-001(01)</p>
+    <h1>基本設計書</h1>
+    <h2>目 次</h2>
+    <ol>
+        <li>1. システム構築方針 ...................................... 4</li>
+        <li>2. 制約条件・前提条件 .................................... 4</li>
+        <li>3. システム概要 .......................................... 4</li>
+        <li>4. システム構成 .......................................... 5</li>
+        <li>5. 機能設計 .............................................. 6</li>
+        <li>6. 画面設計 .............................................. 16</li>
+        <li>7. 帳票設計 .............................................. 17</li>
+        <li>8. データベース設計※ .................................... 17</li>
+        <li>9. コード設計 ............................................ 17</li>
+        <li>10. 運用設計 ............................................. 18</li>
+        <li>11. 信頼性設計※ ......................................... 18</li>
+        <li>12. 性能設計※ ......................................... 18</li>
+        <li>13. 保守設計※ ......................................... 18</li>
+    </ol>
+    <p>※のついている項目は省略している</p>
+    <p>© 2020 HICS</p>
+    <p>目次</p>
 </div>
+<hr>
 
-<!-- Page 4 -->
-<div class="page">
-    <div class="page-header">IS22-IMS-001(01)</div>
+<!-- OCR Page 4 -->
+<div>
+    <p>IS22-IMS-001(01)</p>
     <h2>1. システム構築方針</h2>
     <h3>1.1. システム開発の狙い</h3>
     <p>本システムを開発することで病院における従業員や患者の管理、処方した薬の管理など省力化できるようにする。</p>
 
     <h2>2. 制約条件・前提条件</h2>
-    <h3>【前提条件】</h3>
+    <p>【前提条件】</p>
     <ul>
         <li>本システムは Web ブラウザで操作するものとする。</li>
         <li>Web ブラウザについては基本的に使用の制限はしない。</li>
     </ul>
-    <h3>【制約条件】</h3>
+    <p>【制約条件】</p>
     <ul>
         <li>ログインする ID をロール単位で管理し、ロール単位で機能の使用制限を行う。</li>
         <li>セキュリティ確保のため、従業員のパスワードはハッシュ処理を行い、データベースへの保存はハッシュ化したデータを保存するものとする。</li>
@@ -314,31 +139,27 @@
     <p>Web ブラウザを使用した3層クライアントサーバシステムの形式をとる。</p>
     <h3>3.3. システム概要図</h3>
     <p>別途</p>
-    <div class="page-footer">
-        <span class="copyright">© 2022 HICS</span>
-        <span class="page-info">- 4 -</span>
-        <span></span>
-    </div>
+    <p>© 2022 HICS</p>
+    <p>- 4 -</p>
 </div>
+<hr>
 
-<!-- Page 5 -->
-<div class="page">
-    <div class="page-header">IS22-IMS-001(01)</div>
+<!-- OCR Page 5 -->
+<div>
+    <p>IS22-IMS-001(01)</p>
     <h2>4. システム構成</h2>
     <h3>4.1. システム構成図</h3>
     <p>別途</p>
     <h3>4.2. システム構成表</h3>
     <p>別途</p>
-    <div class="page-footer">
-        <span class="copyright">© 2022 HICS</span>
-        <span class="page-info">- 5 -</span>
-        <span></span>
-    </div>
+    <p>© 2022 HICS</p>
+    <p>- 5 -</p>
 </div>
+<hr>
 
-<!-- Page 6 -->
-<div class="page">
-    <div class="page-header">IS22-IMS-001(01)</div>
+<!-- OCR Page 6 -->
+<div>
+    <p>IS22-IMS-001(01)</p>
     <h2>5. 機能設計</h2>
     <h3>5.1. 機能一覧</h3>
     <table>
@@ -363,7 +184,7 @@
             <td></td>
         </tr>
         <tr>
-            <td rowspan="4"></td> <!-- No for E100 group -->
+            <td></td>
             <td>E100</td>
             <td>従業員管理</td>
             <td></td>
@@ -387,7 +208,7 @@
             <td>従業員のパスワードを変更する機能</td>
         </tr>
         <tr>
-            <td rowspan="5"></td> <!-- No for H100 group -->
+            <td></td>
             <td>H100</td>
             <td>他病院管理機能</td>
             <td></td>
@@ -423,7 +244,7 @@
             <td>指定した病院の電話番号を変更する機能</td>
         </tr>
         <tr>
-            <td rowspan="5"></td> <!-- No for S100 group -->
+            <td></td>
             <td>S100</td>
             <td>仕入れ先管理機能</td>
             <td></td>
@@ -459,7 +280,7 @@
             <td>指定した仕入れ先の電話番号を変更する機能</td>
         </tr>
         <tr>
-            <td rowspan="4"></td> <!-- No for P100 group -->
+            <td></td>
             <td>P100</td>
             <td>患者管理機能</td>
             <td></td>
@@ -489,7 +310,7 @@
             <td>保険証の有効期限が切れている患者を一覧表示する機能</td>
         </tr>
         <tr>
-            <td rowspan="4"></td> <!-- No for D100 group -->
+            <td></td>
             <td>D100</td>
             <td>薬剤・処置管理機能</td>
             <td></td>
@@ -520,26 +341,23 @@
         </tr>
         </tbody>
     </table>
-    <div class="page-footer">
-        <span class="copyright">© 2022 HICS</span>
-        <span class="page-info">- 6 -</span>
-        <span></span>
-    </div>
+    <p>© 2022 HICS</p>
+    <p>- 6 -</p>
 </div>
+<hr>
 
-<!-- Page 7 -->
-<div class="page">
-    <div class="page-header">IS22-IMS-001(01)</div>
+<!-- OCR Page 7 -->
+<div>
+    <p>IS22-IMS-001(01)</p>
     <h3>5.2. 機能</h3>
     <h4>5.2.1 ログイン</h4>
-    <table class="function-def-table">
-        <tr><th>機能 ID</th><td>L101</td></tr>
-        <tr><th>機能名</th><td>ログイン機能</td></tr>
-        <tr><th>アクター</th><td>管理者、全従業員</td></tr>
-        <tr><th>事前条件</th><td></td></tr>
-        <tr><th>事後条件</th><td>入力されたユーザーIDとパスワードが一致されていたらメニュー画面へ、そうでない場合はエラーメッセージを表示。</td></tr>
-        <tr>
-            <th>機能説明</th>
+    <table>
+        <tr><td>機能 ID:</td><td>L101</td></tr>
+        <tr><td>機能名:</td><td>ログイン機能</td></tr>
+        <tr><td>アクター</td><td>管理者、全従業員</td></tr>
+        <tr><td>事前条件</td><td></td></tr>
+        <tr><td>事後条件</td><td>入力されたユーザーIDとパスワードが一致されていたらメニュー画面へ、そうでない場合はエラーメッセージを表示。</td></tr>
+        <tr><td>機能説明</td>
             <td>
                 <ol>
                     <li>ログイン画面を表示する。</li>
@@ -548,23 +366,22 @@
                 </ol>
             </td>
         </tr>
-        <tr><th>入出力</th><td></td></tr>
-        <tr><th>画面</th><td></td></tr>
-        <tr><th>帳票</th><td></td></tr>
-        <tr><th>データベース等</th><td></td></tr>
-        <tr><th>その他入出力</th><td>画面より入力:ユーザーID、パスワード<br>エラーが発生した場合はエラー画面</td></tr>
-        <tr><th>備考</th><td></td></tr>
+        <tr><td>入出力</td><td></td></tr>
+        <tr><td>画面</td><td></td></tr>
+        <tr><td>帳票</td><td></td></tr>
+        <tr><td>データベース等</td><td></td></tr>
+        <tr><td>その他入出力</td><td>画面より入力:ユーザーID、パスワード<br>エラーが発生した場合はエラー画面</td></tr>
+        <tr><td>備考</td><td></td></tr>
     </table>
 
     <h4>5.2.2 従業員管理</h4>
-    <table class="function-def-table">
-        <tr><th>機能 ID</th><td>E101</td></tr>
-        <tr><th>機能名</th><td>現従業員登録機能</td></tr>
-        <tr><th>アクター</th><td>管理者</td></tr>
-        <tr><th>事前条件</th><td>管理者 IDでログインしていること</td></tr>
-        <tr><th>事後条件</th><td>登録前のエラーチェックでエラーがあった場合はエラーメッセージを表示する。エラーがない場合は登録する。</td></tr>
-        <tr>
-            <th>機能説明</th>
+    <table>
+        <tr><td>機能 ID:</td><td>E101</td></tr>
+        <tr><td>機能名:</td><td>現従業員登録機能</td></tr>
+        <tr><td>アクター</td><td>管理者</td></tr>
+        <tr><td>事前条件</td><td>管理者 IDでログインしていること</td></tr>
+        <tr><td>事後条件</td><td>登録前のエラーチェックでエラーがあった場合はエラーメッセージを表示する。エラーがない場合は登録する。</td></tr>
+        <tr><td>機能説明</td>
             <td>
                 <ol>
                     <li>従業員登録画面を表示する。</li>
@@ -574,31 +391,28 @@
                 </ol>
             </td>
         </tr>
-        <tr><th>入出力</th><td></td></tr>
-        <tr><th>画面</th><td></td></tr>
-        <tr><th>帳票</th><td></td></tr>
-        <tr><th>データベース等</th><td></td></tr>
-        <tr><th>その他入出力</th><td>画面より入力:ユーザーID、姓、名、パスワード、ロール<br>エラーが発生した場合はエラー画面</td></tr>
-        <tr><th>備考</th><td>パスワード入力欄は2つ作り、入力させ、一致しているかチェックすること。</td></tr>
+        <tr><td>入出力</td><td></td></tr>
+        <tr><td>画面</td><td></td></tr>
+        <tr><td>帳票</td><td></td></tr>
+        <tr><td>データベース等</td><td></td></tr>
+        <tr><td>その他入出力</td><td>画面より入力:ユーザーID、姓、名、パスワード、ロール<br>エラーが発生した場合はエラー画面</td></tr>
+        <tr><td>備考</td><td>パスワード入力欄は2つ作り、入力させ、一致しているかチェックすること。</td></tr>
     </table>
-    <div class="page-footer">
-        <span class="copyright">© 2022 HICS</span>
-        <span class="page-info">- 7 -</span>
-        <span></span>
-    </div>
+    <p>© 2022 HICS</p>
+    <p>- 7 -</p>
 </div>
+<hr>
 
-<!-- Page 8 -->
-<div class="page">
-    <div class="page-header">IS22-IMS-001(01)</div>
-    <table class="function-def-table">
-        <tr><th>機能 ID</th><td>E102</td></tr>
-        <tr><th>機能名</th><td>従業員更新機能</td></tr>
-        <tr><th>アクター</th><td>管理者</td></tr>
-        <tr><th>事前条件</th><td>管理者 IDでログインしていること。変更は姓又は名だけに限定すること。</td></tr>
-        <tr><th>事後条件</th><td>登録前のエラーチェックでエラーがあった場合はエラーメッセージを表示する。エラーがない場合は登録する。</td></tr>
-        <tr>
-            <th>機能説明</th>
+<!-- OCR Page 8 -->
+<div>
+    <p>IS22-IMS-001(01)</p>
+    <table>
+        <tr><td>機能 ID:</td><td>E102</td></tr>
+        <tr><td>機能名:</td><td>従業員更新機能</td></tr>
+        <tr><td>アクター</td><td>管理者</td></tr>
+        <tr><td>事前条件</td><td>管理者 IDでログインしていること。変更は姓又は名だけに限定すること。</td></tr>
+        <tr><td>事後条件</td><td>登録前のエラーチェックでエラーがあった場合はエラーメッセージを表示する。エラーがない場合は登録する。</td></tr>
+        <tr><td>機能説明</td>
             <td>
                 <ol>
                     <li>従業員変更検索画面を表示する。</li>
@@ -611,22 +425,21 @@
                 </ol>
             </td>
         </tr>
-        <tr><th>入出力</th><td></td></tr>
-        <tr><th>画面</th><td></td></tr>
-        <tr><th>帳票</th><td></td></tr>
-        <tr><th>データベース等</th><td></td></tr>
-        <tr><th>その他入出力</th><td>画面より入力:ユーザーID、姓、名<br>エラーが発生した場合はエラー画面</td></tr>
-        <tr><th>備考</th><td></td></tr>
+        <tr><td>入出力</td><td></td></tr>
+        <tr><td>画面</td><td></td></tr>
+        <tr><td>帳票</td><td></td></tr>
+        <tr><td>データベース等</td><td></td></tr>
+        <tr><td>その他入出力</td><td>画面より入力:ユーザーID、姓、名<br>エラーが発生した場合はエラー画面</td></tr>
+        <tr><td>備考</td><td></td></tr>
     </table>
 
-    <table class="function-def-table" style="margin-top:2em;">
-        <tr><th>機能 ID</th><td>E103</td> <!-- OCRではE101とあるが、機能一覧と整合性をとるためE103に修正 -->
-        <tr><th>機能名</th><td>従業員パスワード変更機能</td></tr>
-        <tr><th>アクター</th><td>管理者もしくは従業員</td></tr>
-        <tr><th>事前条件</th><td>管理者 IDでログインしている場合は、ユーザーID で変更するユーザーを検索すること。<br>従業員 IDでログインしている場合は、そのユーザーのパスワードを変更するようにすること。</td></tr>
-        <tr><th>事後条件</th><td>変更したパスワードが変更されること。</td></tr>
-        <tr>
-            <th>機能説明</th>
+    <table>
+        <tr><td>機能 ID:</td><td>E103</td> <!-- OCRではE101だが、機能一覧に合わせる -->
+        <tr><td>機能名:</td><td>従業員パスワード変更機能</td></tr>
+        <tr><td>アクター</td><td>管理者もしくは従業員</td></tr>
+        <tr><td>事前条件</td><td>管理者 IDでログインしている場合は、ユーザーID で変更するユーザーを検索すること。<br>従業員 IDでログインしている場合は、そのユーザーのパスワードを変更するようにすること。</td></tr>
+        <tr><td>事後条件</td><td>変更したパスワードが変更されること。</td></tr>
+        <tr><td>機能説明</td>
             <td>
                 <ol>
                     <li>パスワード変更画面を表示する。</li>
@@ -635,32 +448,29 @@
                 </ol>
             </td>
         </tr>
-        <tr><th>入出力</th><td></td></tr>
-        <tr><th>画面</th><td></td></tr>
-        <tr><th>帳票</th><td></td></tr>
-        <tr><th>データベース等</th><td></td></tr>
-        <tr><th>その他入出力</th><td>画面より入力:パスワード<br>エラーが発生した場合はエラー画面</td></tr>
-        <tr><th>備考</th><td>実装に関しては管理者機能と従業員用と2つあるため、要検討のこと。<br>パスワード変更時はパスワードを2回入力させ、一致しているかチェックすること。</td></tr>
+        <tr><td>入出力</td><td></td></tr>
+        <tr><td>画面</td><td></td></tr>
+        <tr><td>帳票</td><td></td></tr>
+        <tr><td>データベース等</td><td></td></tr>
+        <tr><td>その他入出力</td><td>画面より入力:パスワード<br>エラーが発生した場合はエラー画面</td></tr>
+        <tr><td>備考</td><td>実装に関しては管理者機能と従業員用と2つあるため、要検討のこと。<br>パスワード変更時はパスワードを2回入力させ、一致しているかチェックすること。</td></tr>
     </table>
-    <div class="page-footer">
-        <span class="copyright">© 2022 HICS</span>
-        <span class="page-info">- 8 -</span>
-        <span></span>
-    </div>
+    <p>© 2022 HICS</p>
+    <p>- 8 -</p>
 </div>
+<hr>
 
-<!-- Page 9 -->
-<div class="page">
-    <div class="page-header">IS22-IMS-001(01)</div>
+<!-- OCR Page 9 -->
+<div>
+    <p>IS22-IMS-001(01)</p>
     <h4>5.2.3 他病院管理機能</h4>
-    <table class="function-def-table">
-        <tr><th>機能 ID</th><td>H101</td></tr>
-        <tr><th>機能名</th><td>他病院登録機能</td></tr>
-        <tr><th>アクター</th><td>管理者</td></tr>
-        <tr><th>事前条件</th><td>管理者 IDでログインしていること</td></tr>
-        <tr><th>事後条件</th><td></td></tr>
-        <tr>
-            <th>機能説明</th>
+    <table>
+        <tr><td>機能 ID:</td><td>H101</td></tr>
+        <tr><td>機能名:</td><td>他病院登録機能</td></tr>
+        <tr><td>アクター</td><td>管理者</td></tr>
+        <tr><td>事前条件</td><td>管理者 IDでログインしていること</td></tr>
+        <tr><td>事後条件</td><td></td></tr>
+        <tr><td>機能説明</td>
             <td>
                 <ol>
                     <li>登録画面を表示する。</li>
@@ -670,37 +480,36 @@
                 </ol>
             </td>
         </tr>
-        <tr><th>入出力</th><td></td></tr>
-        <tr><th>画面</th><td></td></tr>
-        <tr><th>帳票</th><td></td></tr>
-        <tr><th>データベース等</th><td></td></tr>
-        <tr><th>その他入出力</th><td>画面より入力:他病院 ID、他病院名、他病院住所、他病院電話番号、資本金、救急対応<br>エラーが発生した場合はエラー画面</td></tr>
-        <tr><th>備考</th><td></td></tr>
+        <tr><td>入出力</td><td></td></tr>
+        <tr><td>画面</td><td></td></tr>
+        <tr><td>帳票</td><td></td></tr>
+        <tr><td>データベース等</td><td></td></tr>
+        <tr><td>その他入出力</td><td>画面より入力:他病院 ID、他病院名、他病院住所、他病院電話番号、資本金、救急対応<br>エラーが発生した場合はエラー画面</td></tr>
+        <tr><td>備考</td><td></td></tr>
     </table>
 
-    <table class="function-def-table" style="margin-top:2em;">
-        <tr><th>機能 ID</th><td>H102</td></tr>
-        <tr><th>機能名</th><td>他病院一覧表示機能</td></tr>
-        <tr><th>アクター</th><td>管理者</td></tr>
-        <tr><th>事前条件</th><td>管理者 IDでログインしていること</td></tr>
-        <tr><th>事後条件</th><td></td></tr>
-        <tr><th>機能説明</th><td><ol><li>DBより病院情報を取得し表示する。</li></ol></td></tr>
-        <tr><th>入出力</th><td></td></tr>
-        <tr><th>画面</th><td></td></tr>
-        <tr><th>帳票</th><td></td></tr>
-        <tr><th>データベース等</th><td></td></tr>
-        <tr><th>その他入出力</th><td>一覧画面</td></tr>
-        <tr><th>備考</th><td></td></tr>
+    <table>
+        <tr><td>機能 ID:</td><td>H102</td></tr>
+        <tr><td>機能名:</td><td>他病院一覧表示機能</td></tr>
+        <tr><td>アクター</td><td>管理者</td></tr>
+        <tr><td>事前条件</td><td>管理者 IDでログインしていること</td></tr>
+        <tr><td>事後条件</td><td></td></tr>
+        <tr><td>機能説明</td><td><ol><li>DBより病院情報を取得し表示する。</li></ol></td></tr>
+        <tr><td>入出力</td><td></td></tr>
+        <tr><td>画面</td><td></td></tr>
+        <tr><td>帳票</td><td></td></tr>
+        <tr><td>データベース等</td><td></td></tr>
+        <tr><td>その他入出力</td><td>一覧画面</td></tr>
+        <tr><td>備考</td><td></td></tr>
     </table>
 
-    <table class="function-def-table" style="margin-top:2em;">
-        <tr><th>機能 ID</th><td>H103</td></tr>
-        <tr><th>機能名</th><td>他住所→病院検索機能</td></tr>
-        <tr><th>アクター</th><td>管理者</td></tr>
-        <tr><th>事前条件</th><td>管理者 IDでログインしていること</td></tr>
-        <tr><th>事後条件</th><td></td></tr>
-        <tr>
-            <th>機能説明</th>
+    <table>
+        <tr><td>機能 ID:</td><td>H103</td></tr>
+        <tr><td>機能名:</td><td>他住所→病院検索機能</td></tr>
+        <tr><td>アクター</td><td>管理者</td></tr>
+        <tr><td>事前条件</td><td>管理者 IDでログインしていること</td></tr>
+        <tr><td>事後条件</td><td></td></tr>
+        <tr><td>機能説明</td>
             <td>
                 <ol>
                     <li>検索画面を表示する。ユーザーは住所の一部を入力し、検索ボタンを押下する。</li>
@@ -708,31 +517,28 @@
                 </ol>
             </td>
         </tr>
-        <tr><th>入出力</th><td></td></tr>
-        <tr><th>画面</th><td></td></tr>
-        <tr><th>帳票</th><td></td></tr>
-        <tr><th>データベース等</th><td></td></tr>
-        <tr><th>その他入出力</th><td>画面より入力:住所</td></tr>
-        <tr><th>備考</th><td></td></tr>
+        <tr><td>入出力</td><td></td></tr>
+        <tr><td>画面</td><td></td></tr>
+        <tr><td>帳票</td><td></td></tr>
+        <tr><td>データベース等</td><td></td></tr>
+        <tr><td>その他入出力</td><td>画面より入力:住所</td></tr>
+        <tr><td>備考</td><td></td></tr>
     </table>
-    <div class="page-footer">
-        <span class="copyright">© 2022 HICS</span>
-        <span class="page-info">- 9 -</span>
-        <span></span>
-    </div>
+    <p>© 2022 HICS</p>
+    <p>- 9 -</p>
 </div>
+<hr>
 
-<!-- Page 10 -->
-<div class="page">
-    <div class="page-header">IS22-IMS-001(01)</div>
-    <table class="function-def-table">
-        <tr><th>機能 ID</th><td>H104</td></tr>
-        <tr><th>機能名</th><td>資本金→他病院検索機能</td></tr>
-        <tr><th>アクター</th><td>管理者</td></tr>
-        <tr><th>事前条件</th><td>管理者 IDでログインしていること</td></tr>
-        <tr><th>事後条件</th><td></td></tr>
-        <tr>
-            <th>機能説明</th>
+<!-- OCR Page 10 -->
+<div>
+    <p>IS22-IMS-001(01)</p>
+    <table>
+        <tr><td>機能 ID:</td><td>H104</td></tr>
+        <tr><td>機能名:</td><td>資本金→他病院検索機能</td></tr>
+        <tr><td>アクター</td><td>管理者</td></tr>
+        <tr><td>事前条件</td><td>管理者 IDでログインしていること</td></tr>
+        <tr><td>事後条件</td><td></td></tr>
+        <tr><td>機能説明</td>
             <td>
                 <ol>
                     <li>検索画面を表示する。ユーザーは資本金を入力し、検索ボタンを押下する。</li>
@@ -740,22 +546,21 @@
                 </ol>
             </td>
         </tr>
-        <tr><th>入出力</th><td></td></tr>
-        <tr><th>画面</th><td></td></tr>
-        <tr><th>帳票</th><td></td></tr>
-        <tr><th>データベース等</th><td></td></tr>
-        <tr><th>その他入出力</th><td>画面より入力:資本金</td></tr>
-        <tr><th>備考</th><td></td></tr>
+        <tr><td>入出力</td><td></td></tr>
+        <tr><td>画面</td><td></td></tr>
+        <tr><td>帳票</td><td></td></tr>
+        <tr><td>データベース等</td><td></td></tr>
+        <tr><td>その他入出力</td><td>画面より入力:資本金</td></tr>
+        <tr><td>備考</td><td></td></tr>
     </table>
 
-    <table class="function-def-table" style="margin-top:2em;">
-        <tr><th>機能 ID</th><td>H105</td></tr>
-        <tr><th>機能名</th><td>他病院情報変更機能</td></tr>
-        <tr><th>アクター</th><td>管理者</td></tr>
-        <tr><th>事前条件</th><td>管理者 ID でログインしていること</td></tr>
-        <tr><th>事後条件</th><td></td></tr>
-        <tr>
-            <th>機能説明</th>
+    <table>
+        <tr><td>機能 ID:</td><td>H105</td></tr>
+        <tr><td>機能名:</td><td>他病院情報変更機能</td></tr>
+        <tr><td>アクター</td><td>管理者</td></tr>
+        <tr><td>事前条件</td><td>管理者 ID でログインしていること</td></tr>
+        <tr><td>事後条件</td><td></td></tr>
+        <tr><td>機能説明</td>
             <td>
                 <ol>
                     <li>他病院情報を表示する。</li>
@@ -765,32 +570,29 @@
                 </ol>
             </td>
         </tr>
-        <tr><th>入出力</th><td></td></tr>
-        <tr><th>画面</th><td></td></tr>
-        <tr><th>帳票</th><td></td></tr>
-        <tr><th>データベース等</th><td></td></tr>
-        <tr><th>その他入出力</th><td>画面より入力:電話番号<br>エラーが発生した場合はエラー画面</td></tr>
-        <tr><th>備考</th><td></td></tr>
+        <tr><td>入出力</td><td></td></tr>
+        <tr><td>画面</td><td></td></tr>
+        <tr><td>帳票</td><td></td></tr>
+        <tr><td>データベース等</td><td></td></tr>
+        <tr><td>その他入出力</td><td>画面より入力:電話番号<br>エラーが発生した場合はエラー画面</td></tr>
+        <tr><td>備考</td><td></td></tr>
     </table>
-    <div class="page-footer">
-        <span class="copyright">© 2022 HICS</span>
-        <span class="page-info">- 10 -</span>
-        <span></span>
-    </div>
+    <p>© 2022 HICS</p>
+    <p>- 10 -</p>
 </div>
+<hr>
 
-<!-- Page 11 -->
-<div class="page">
-    <div class="page-header">IS22-IMS-001(01)</div>
+<!-- OCR Page 11 -->
+<div>
+    <p>IS22-IMS-001(01)</p>
     <h4>5.2.4 仕入れ先管理機能</h4>
-    <table class="function-def-table">
-        <tr><th>機能 ID</th><td>S101</td></tr>
-        <tr><th>機能名</th><td>仕入れ先登録機能</td></tr>
-        <tr><th>アクター</th><td>管理者</td></tr>
-        <tr><th>事前条件</th><td>管理者 IDでログインしていること</td></tr>
-        <tr><th>事後条件</th><td></td></tr>
-        <tr>
-            <th>機能説明</th>
+    <table>
+        <tr><td>機能 ID:</td><td>S101</td></tr>
+        <tr><td>機能名:</td><td>仕入れ先登録機能</td></tr>
+        <tr><td>アクター</td><td>管理者</td></tr>
+        <tr><td>事前条件</td><td>管理者 IDでログインしていること</td></tr>
+        <tr><td>事後条件</td><td></td></tr>
+        <tr><td>機能説明</td>
             <td>
                 <ol>
                     <li>登録画面を表示する。</li>
@@ -800,46 +602,43 @@
                 </ol>
             </td>
         </tr>
-        <tr><th>入出力</th><td></td></tr>
-        <tr><th>画面</th><td></td></tr>
-        <tr><th>帳票</th><td></td></tr>
-        <tr><th>データベース等</th><td></td></tr>
-        <tr><th>その他入出力</th><td>画面より入力:仕入れ先 ID、仕入れ先名、仕入れ先住所、仕入れ先電話番号、資本金、納期<br>エラーが発生した場合はエラー画面</td></tr>
-        <tr><th>備考</th><td></td></tr>
+        <tr><td>入出力</td><td></td></tr>
+        <tr><td>画面</td><td></td></tr>
+        <tr><td>帳票</td><td></td></tr>
+        <tr><td>データベース等</td><td></td></tr>
+        <tr><td>その他入出力</td><td>画面より入力:仕入れ先 ID、仕入れ先名、仕入れ先住所、仕入れ先電話番号、資本金、納期<br>エラーが発生した場合はエラー画面</td></tr>
+        <tr><td>備考</td><td></td></tr>
     </table>
 
-    <table class="function-def-table" style="margin-top:2em;">
-        <tr><th>機能 ID</th><td>S102</td></tr>
-        <tr><th>機能名</th><td>仕入れ先一覧表示機能</td></tr>
-        <tr><th>アクター</th><td>管理者</td></tr>
-        <tr><th>事前条件</th><td>管理者 IDでログインしていること</td></tr>
-        <tr><th>事後条件</th><td></td></tr>
-        <tr><th>機能説明</th><td><ol><li>DBより仕入れ先情報を取得し表示する。</li></ol></td></tr>
-        <tr><th>入出力</th><td></td></tr>
-        <tr><th>画面</th><td></td></tr>
-        <tr><th>帳票</th><td></td></tr>
-        <tr><th>データベース等</th><td></td></tr>
-        <tr><th>その他入出力</th><td></td></tr>
-        <tr><th>備考</th><td></td></tr>
+    <table>
+        <tr><td>機能 ID:</td><td>S102</td></tr>
+        <tr><td>機能名:</td><td>仕入れ先一覧表示機能</td></tr>
+        <tr><td>アクター</td><td>管理者</td></tr>
+        <tr><td>事前条件</td><td>管理者 IDでログインしていること</td></tr>
+        <tr><td>事後条件</td><td></td></tr>
+        <tr><td>機能説明</td><td><ol><li>DBより仕入れ先情報を取得し表示する。</li></ol></td></tr>
+        <tr><td>入出力</td><td></td></tr>
+        <tr><td>画面</td><td></td></tr>
+        <tr><td>帳票</td><td></td></tr>
+        <tr><td>データベース等</td><td></td></tr>
+        <tr><td>その他入出力</td><td></td></tr>
+        <tr><td>備考</td><td></td></tr>
     </table>
-    <div class="page-footer">
-        <span class="copyright">© 2022 HICS</span>
-        <span class="page-info">- 11 -</span>
-        <span></span>
-    </div>
+    <p>© 2022 HICS</p>
+    <p>- 11 -</p>
 </div>
+<hr>
 
-<!-- Page 12 -->
-<div class="page">
-    <div class="page-header">IS22-IMS-001(01)</div>
-    <table class="function-def-table">
-        <tr><th>機能 ID</th><td>S103</td></tr>
-        <tr><th>機能名</th><td>他住所→仕入れ先検索機能</td></tr>
-        <tr><th>アクター</th><td>管理者</td></tr>
-        <tr><th>事前条件</th><td>管理者 IDでログインしていること</td></tr>
-        <tr><th>事後条件</th><td></td></tr>
-        <tr>
-            <th>機能説明</th>
+<!-- OCR Page 12 -->
+<div>
+    <p>IS22-IMS-001(01)</p>
+    <table>
+        <tr><td>機能 ID:</td><td>S103</td></tr>
+        <tr><td>機能名:</td><td>他住所→仕入れ先検索機能</td></tr>
+        <tr><td>アクター</td><td>管理者</td></tr>
+        <tr><td>事前条件</td><td>管理者 IDでログインしていること</td></tr>
+        <tr><td>事後条件</td><td></td></tr>
+        <tr><td>機能説明</td>
             <td>
                 <ol>
                     <li>検索画面を表示する。ユーザーは住所の一部を入力し、検索ボタンを押下する。</li>
@@ -847,22 +646,21 @@
                 </ol>
             </td>
         </tr>
-        <tr><th>入出力</th><td></td></tr>
-        <tr><th>画面</th><td></td></tr>
-        <tr><th>帳票</th><td></td></tr>
-        <tr><th>データベース等</th><td></td></tr>
-        <tr><th>その他入出力</th><td>画面より入力:住所</td></tr>
-        <tr><th>備考</th><td></td></tr>
+        <tr><td>入出力</td><td></td></tr>
+        <tr><td>画面</td><td></td></tr>
+        <tr><td>帳票</td><td></td></tr>
+        <tr><td>データベース等</td><td></td></tr>
+        <tr><td>その他入出力</td><td>画面より入力:住所</td></tr>
+        <tr><td>備考</td><td></td></tr>
     </table>
 
-    <table class="function-def-table" style="margin-top:2em;">
-        <tr><th>機能 ID</th><td>S104</td></tr>
-        <tr><th>機能名</th><td>資本金→仕入れ先検索機能</td></tr>
-        <tr><th>アクター</th><td>管理者</td></tr>
-        <tr><th>事前条件</th><td>管理者 IDでログインしていること</td></tr>
-        <tr><th>事後条件</th><td></td></tr>
-        <tr>
-            <th>機能説明</th>
+    <table>
+        <tr><td>機能 ID:</td><td>S104</td></tr>
+        <tr><td>機能名:</td><td>資本金→仕入れ先検索機能</td></tr>
+        <tr><td>アクター</td><td>管理者</td></tr>
+        <tr><td>事前条件</td><td>管理者 IDでログインしていること</td></tr>
+        <tr><td>事後条件</td><td></td></tr>
+        <tr><td>機能説明</td>
             <td>
                 <ol>
                     <li>検索画面を表示する。ユーザーは資本金を入力し、検索ボタンを押下する。</li>
@@ -870,22 +668,21 @@
                 </ol>
             </td>
         </tr>
-        <tr><th>入出力</th><td></td></tr>
-        <tr><th>画面</th><td></td></tr>
-        <tr><th>帳票</th><td></td></tr>
-        <tr><th>データベース等</th><td></td></tr>
-        <tr><th>その他入出力</th><td>画面より入力:資本金</td></tr>
-        <tr><th>備考</th><td></td></tr>
+        <tr><td>入出力</td><td></td></tr>
+        <tr><td>画面</td><td></td></tr>
+        <tr><td>帳票</td><td></td></tr>
+        <tr><td>データベース等</td><td></td></tr>
+        <tr><td>その他入出力</td><td>画面より入力:資本金</td></tr>
+        <tr><td>備考</td><td></td></tr>
     </table>
 
-    <table class="function-def-table" style="margin-top:2em;">
-        <tr><th>機能 ID</th><td>S105</td></tr>
-        <tr><th>機能名</th><td>仕入れ先情報変更機能</td></tr>
-        <tr><th>アクター</th><td>管理者</td></tr>
-        <tr><th>事前条件</th><td>管理者 IDでログインしていること</td></tr>
-        <tr><th>事後条件</th><td></td></tr>
-        <tr>
-            <th>機能説明</th>
+    <table>
+        <tr><td>機能 ID:</td><td>S105</td></tr>
+        <tr><td>機能名:</td><td>仕入れ先情報変更機能</td></tr>
+        <tr><td>アクター</td><td>管理者</td></tr>
+        <tr><td>事前条件</td><td>管理者 IDでログインしていること</td></tr>
+        <tr><td>事後条件</td><td></td></tr>
+        <tr><td>機能説明</td>
             <td>
                 <ol>
                     <li>仕入れ先情報を表示する。</li>
@@ -894,32 +691,29 @@
                 </ol>
             </td>
         </tr>
-        <tr><th>入出力</th><td></td></tr>
-        <tr><th>画面</th><td></td></tr>
-        <tr><th>帳票</th><td></td></tr>
-        <tr><th>データベース等</th><td></td></tr>
-        <tr><th>その他入出力</th><td>画面より入力:電話番号<br>エラーが発生した場合はエラー画面</td></tr>
-        <tr><th>備考</th><td></td></tr>
+        <tr><td>入出力</td><td></td></tr>
+        <tr><td>画面</td><td></td></tr>
+        <tr><td>帳票</td><td></td></tr>
+        <tr><td>データベース等</td><td></td></tr>
+        <tr><td>その他入出力</td><td>画面より入力:電話番号<br>エラーが発生した場合はエラー画面</td></tr>
+        <tr><td>備考</td><td></td></tr>
     </table>
-    <div class="page-footer">
-        <span class="copyright">© 2022 HICS</span>
-        <span class="page-info">- 12 -</span>
-        <span></span>
-    </div>
+    <p>© 2022 HICS</p>
+    <p>- 12 -</p>
 </div>
+<hr>
 
-<!-- Page 13 -->
-<div class="page">
-    <div class="page-header">IS22-IMS-001(01)</div>
+<!-- OCR Page 13 -->
+<div>
+    <p>IS22-IMS-001(01)</p>
     <h4>5.2.5 患者管理機能</h4>
-    <table class="function-def-table">
-        <tr><th>機能 ID</th><td>P101</td></tr>
-        <tr><th>機能名</th><td>患者登録機能</td></tr>
-        <tr><th>アクター</th><td>受付</td></tr>
-        <tr><th>事前条件</th><td>受付ロールのユーザーID でログインしていること。</td></tr>
-        <tr><th>事後条件</th><td></td></tr>
-        <tr>
-            <th>機能説明</th>
+    <table>
+        <tr><td>機能 ID:</td><td>P101</td></tr>
+        <tr><td>機能名:</td><td>患者登録機能</td></tr>
+        <tr><td>アクター</td><td>受付</td></tr>
+        <tr><td>事前条件</td><td>受付ロールのユーザーID でログインしていること。</td></tr>
+        <tr><td>事後条件</td><td></td></tr>
+        <tr><td>機能説明</td>
             <td>
                 <ol>
                     <li>登録画面を表示する。</li>
@@ -928,22 +722,21 @@
                 </ol>
             </td>
         </tr>
-        <tr><th>入出力</th><td></td></tr>
-        <tr><th>画面</th><td></td></tr>
-        <tr><th>帳票</th><td></td></tr>
-        <tr><th>データベース等</th><td></td></tr>
-        <tr><th>その他入出力</th><td>画面より入力:患者ID、患者姓、患者名、保険証記号番号、有効期限<br>エラーが発生した場合はエラー画面</td></tr>
-        <tr><th>備考</th><td></td></tr>
+        <tr><td>入出力</td><td></td></tr>
+        <tr><td>画面</td><td></td></tr>
+        <tr><td>帳票</td><td></td></tr>
+        <tr><td>データベース等</td><td></td></tr>
+        <tr><td>その他入出力</td><td>画面より入力:患者ID、患者姓、患者名、保険証記号番号、有効期限<br>エラーが発生した場合はエラー画面</td></tr>
+        <tr><td>備考</td><td></td></tr>
     </table>
 
-    <table class="function-def-table" style="margin-top:2em;">
-        <tr><th>機能 ID</th><td>P102</td></tr>
-        <tr><th>機能名</th><td>患者保険証変更機能</td></tr>
-        <tr><th>アクター</th><td>受付</td></tr>
-        <tr><th>事前条件</th><td>受付ロールのユーザーID でログインしていること。</td></tr>
-        <tr><th>事後条件</th><td>保険証記号番号が変更となるときは有効期限も確認。<br>有効期限のみ入力の場合は、保険証記号番号は変更されない。</td></tr>
-        <tr>
-            <th>機能説明</th>
+    <table>
+        <tr><td>機能 ID:</td><td>P102</td></tr>
+        <tr><td>機能名:</td><td>患者保険証変更機能</td></tr>
+        <tr><td>アクター</td><td>受付</td></tr>
+        <tr><td>事前条件</td><td>受付ロールのユーザーID でログインしていること。</td></tr>
+        <tr><td>事後条件</td><td>保険証記号番号が変更となるときは有効期限も確認。<br>有効期限のみ入力の場合は、保険証記号番号は変更されない。</td></tr>
+        <tr><td>機能説明</td>
             <td>
                 <ol>
                     <li>保険証情報を表示する。</li>
@@ -952,31 +745,28 @@
                 </ol>
             </td>
         </tr>
-        <tr><th>入出力</th><td></td></tr>
-        <tr><th>画面</th><td></td></tr>
-        <tr><th>帳票</th><td></td></tr>
-        <tr><th>データベース等</th><td></td></tr>
-        <tr><th>その他入出力</th><td>画面より入力:患者ID、患者姓、患者名、保険証記号番号、有効期限<br>エラーが発生した場合はエラー画面</td></tr>
-        <tr><th>備考</th><td>事後条件にある通り、保険証記号番号と有効期限を両方入力する場合があるので注意すること。</td></tr>
+        <tr><td>入出力</td><td></td></tr>
+        <tr><td>画面</td><td></td></tr>
+        <tr><td>帳票</td><td></td></tr>
+        <tr><td>データベース等</td><td></td></tr>
+        <tr><td>その他入出力</td><td>画面より入力:患者ID、患者姓、患者名、保険証記号番号、有効期限<br>エラーが発生した場合はエラー画面</td></tr>
+        <tr><td>備考</td><td>事後条件にある通り、保険証記号番号と有効期限を両方入力する場合があるので注意すること。</td></tr>
     </table>
-    <div class="page-footer">
-        <span class="copyright">© 2022 HICS</span>
-        <span class="page-info">- 13 -</span>
-        <span></span>
-    </div>
+    <p>© 2022 HICS</p>
+    <p>- 13 -</p>
 </div>
+<hr>
 
-<!-- Page 14 -->
-<div class="page">
-    <div class="page-header">IS22-IMS-001(01)</div>
-    <table class="function-def-table">
-        <tr><th>機能 ID</th><td>P103</td></tr>
-        <tr><th>機能名</th><td>患者名検索機能</td></tr>
-        <tr><th>アクター</th><td>受付、医師</td></tr>
-        <tr><th>事前条件</th><td>受付ロールのユーザーID でログインしていること。<br>医師ロールのユーザーID でログインしていること。</td></tr>
-        <tr><th>事後条件</th><td></td></tr>
-        <tr>
-            <th>機能説明</th>
+<!-- OCR Page 14 -->
+<div>
+    <p>IS22-IMS-001(01)</p>
+    <table>
+        <tr><td>機能 ID:</td><td>P103</td></tr>
+        <tr><td>機能名:</td><td>患者名検索機能</td></tr>
+        <tr><td>アクター</td><td>受付、医師</td></tr>
+        <tr><td>事前条件</td><td>受付ロールのユーザーID でログインしていること。<br>医師ロールのユーザーID でログインしていること。</td></tr>
+        <tr><td>事後条件</td><td></td></tr>
+        <tr><td>機能説明</td>
             <td>
                 <ol>
                     <li>検索画面を表示する。ユーザーは患者名を入力し、検索ボタンを押下する。</li>
@@ -984,47 +774,44 @@
                 </ol>
             </td>
         </tr>
-        <tr><th>入出力</th><td></td></tr>
-        <tr><th>画面</th><td></td></tr>
-        <tr><th>帳票</th><td></td></tr>
-        <tr><th>データベース等</th><td></td></tr>
-        <tr><th>その他入出力</th><td>画面より入力:患者名</td></tr>
-        <tr><th>備考</th><td>医師ロールではここでの結果から薬剤。処置機能にあるものを呼び出すようにするため、実装は要件等のこと。</td></tr>
+        <tr><td>入出力</td><td></td></tr>
+        <tr><td>画面</td><td></td></tr>
+        <tr><td>帳票</td><td></td></tr>
+        <tr><td>データベース等</td><td></td></tr>
+        <tr><td>その他入出力</td><td>画面より入力:患者名</td></tr>
+        <tr><td>備考</td><td>医師ロールではここでの結果から薬剤。処置機能にあるものを呼び出すようにするため、実装は要件等のこと。</td></tr>
     </table>
 
-    <table class="function-def-table" style="margin-top:2em;">
-        <tr><th>機能 ID</th><td>P104</td></tr>
-        <tr><th>機能名</th><td>保険証期限確認機能</td></tr>
-        <tr><th>アクター</th><td>受付</td></tr>
-        <tr><th>事前条件</th><td>受付ロールのユーザーID でログインしていること。</td></tr>
-        <tr><th>事後条件</th><td></td></tr>
-        <tr><th>機能説明</th><td><ol><li>患者情報をチェックし、現在日付と比較し有効期限を過ぎた患者を一覧表示する。</li></ol></td></tr>
-        <tr><th>入出力</th><td></td></tr>
-        <tr><th>画面</th><td></td></tr>
-        <tr><th>帳票</th><td></td></tr>
-        <tr><th>データベース等</th><td></td></tr>
-        <tr><th>その他入出力</th><td></td></tr>
-        <tr><th>備考</th><td></td></tr>
+    <table>
+        <tr><td>機能 ID:</td><td>P104</td></tr>
+        <tr><td>機能名:</td><td>保険証期限確認機能</td></tr>
+        <tr><td>アクター</td><td>受付</td></tr>
+        <tr><td>事前条件</td><td>受付ロールのユーザーID でログインしていること。</td></tr>
+        <tr><td>事後条件</td><td></td></tr>
+        <tr><td>機能説明</td><td><ol><li>患者情報をチェックし、現在日付と比較し有効期限を過ぎた患者を一覧表示する。</li></ol></td></tr>
+        <tr><td>入出力</td><td></td></tr>
+        <tr><td>画面</td><td></td></tr>
+        <tr><td>帳票</td><td></td></tr>
+        <tr><td>データベース等</td><td></td></tr>
+        <tr><td>その他入出力</td><td></td></tr>
+        <tr><td>備考</td><td></td></tr>
     </table>
-    <div class="page-footer">
-        <span class="copyright">© 2022 HICS</span>
-        <span class="page-info">- 14 -</span>
-        <span></span>
-    </div>
+    <p>© 2022 HICS</p>
+    <p>- 14 -</p>
 </div>
+<hr>
 
-<!-- Page 15 -->
-<div class="page">
-    <div class="page-header">IS22-IMS-001(01)</div>
+<!-- OCR Page 15 -->
+<div>
+    <p>IS22-IMS-001(01)</p>
     <h4>5.2.6 薬剤・処置管理機能</h4>
-    <table class="function-def-table">
-        <tr><th>機能 ID</th><td>D101</td></tr>
-        <tr><th>機能名</th><td>薬投与指示機能</td></tr>
-        <tr><th>アクター</th><td>医師</td></tr>
-        <tr><th>事前条件</th><td>医師ロールのユーザーID でログインしていること。</td></tr>
-        <tr><th>事後条件</th><td>確定までの間はDBへの登録をしないこと。</td></tr>
-        <tr>
-            <th>機能説明</th>
+    <table>
+        <tr><td>機能 ID:</td><td>D101</td></tr>
+        <tr><td>機能名:</td><td>薬投与指示機能</td></tr>
+        <tr><td>アクター</td><td>医師</td></tr>
+        <tr><td>事前条件</td><td>医師ロールのユーザーID でログインしていること。</td></tr>
+        <tr><td>事後条件</td><td>確定までの間はDBへの登録をしないこと。</td></tr>
+        <tr><td>機能説明</td>
             <td>
                 <ol>
                     <li>対象となる患者への処置画面を表示させる。</li>
@@ -1033,22 +820,21 @@
                 </ol>
             </td>
         </tr>
-        <tr><th>入出力</th><td></td></tr>
-        <tr><th>画面</th><td></td></tr>
-        <tr><th>帳票</th><td></td></tr>
-        <tr><th>データベース等</th><td></td></tr>
-        <tr><th>その他入出力</th><td>画面から入力:薬剤名、数量<br>確認画面での入力:「薬剤選択画面へ戻る」「削除」「処置確定」ボタンが必要。</td></tr>
-        <tr><th>備考</th><td>薬剤名は一覧表示。数量はプルダウンもしくは値入力とする。<br>確認画面は投与を決めた薬剤のみの一覧表示とする。<br>「薬剤選択画面へ戻る」「削除」ボタンに関しては実装時に要検討のこと。<br>薬剤選択画面に戻った後の数量変更の操作に関しては実装時に要検討のこと。</td></tr>
+        <tr><td>入出力</td><td></td></tr>
+        <tr><td>画面</td><td></td></tr>
+        <tr><td>帳票</td><td></td></tr>
+        <tr><td>データベース等</td><td></td></tr>
+        <tr><td>その他入出力</td><td>画面から入力:薬剤名、数量<br>確認画面での入力:「薬剤選択画面へ戻る」「削除」「処置確定」ボタンが必要。</td></tr>
+        <tr><td>備考</td><td>薬剤名は一覧表示。数量はプルダウンもしくは値入力とする。<br>確認画面は投与を決めた薬剤のみの一覧表示とする。<br>「薬剤選択画面へ戻る」「削除」ボタンに関しては実装時に要検討のこと。<br>薬剤選択画面に戻った後の数量変更の操作に関しては実装時に要検討のこと。</td></tr>
     </table>
 
-    <table class="function-def-table" style="margin-top:2em;">
-        <tr><th>機能 ID</th><td>D102</td></tr>
-        <tr><th>機能名</th><td>薬投与削除機能</td></tr>
-        <tr><th>アクター</th><td>医師</td></tr>
-        <tr><th>事前条件</th><td>医師ロールのユーザーID でログインしていること。</td></tr>
-        <tr><th>事後条件</th><td>確定までの間はDBへの登録をしないこと。</td></tr>
-        <tr>
-            <th>機能説明</th>
+    <table>
+        <tr><td>機能 ID:</td><td>D102</td></tr>
+        <tr><td>機能名:</td><td>薬投与削除機能</td></tr>
+        <tr><td>アクター</td><td>医師</td></tr>
+        <tr><td>事前条件</td><td>医師ロールのユーザーID でログインしていること。</td></tr>
+        <tr><td>事後条件</td><td>確定までの間はDBへの登録をしないこと。</td></tr>
+        <tr><td>機能説明</td>
             <td>
                 <ol>
                     <li>薬投与指示機能で表示される確認画面となる。</li>
@@ -1057,31 +843,28 @@
                 </ol>
             </td>
         </tr>
-        <tr><th>入出力</th><td></td></tr>
-        <tr><th>画面</th><td></td></tr>
-        <tr><th>帳票</th><td></td></tr>
-        <tr><th>データベース等</th><td></td></tr>
-        <tr><th>その他入出力</th><td>画面での入力:「薬剤選択画面へ戻る」「削除」「処置確定」ボタン。</td></tr>
-        <tr><th>備考</th><td>「薬剤選択画面へ戻る」「削除」ボタンに関しては実装時に要検討のこと。</td></tr>
+        <tr><td>入出力</td><td></td></tr>
+        <tr><td>画面</td><td></td></tr>
+        <tr><td>帳票</td><td></td></tr>
+        <tr><td>データベース等</td><td></td></tr>
+        <tr><td>その他入出力</td><td>画面での入力:「薬剤選択画面へ戻る」「削除」「処置確定」ボタン。</td></tr>
+        <tr><td>備考</td><td>「薬剤選択画面へ戻る」「削除」ボタンに関しては実装時に要検討のこと。</td></tr>
     </table>
-    <div class="page-footer">
-        <span class="copyright">© 2022 HICS</span>
-        <span class="page-info">- 15 -</span>
-        <span></span>
-    </div>
+    <p>© 2022 HICS</p>
+    <p>- 15 -</p>
 </div>
+<hr>
 
-<!-- Page 16 -->
-<div class="page">
-    <div class="page-header">IS22-IMS-001(01)</div>
-    <table class="function-def-table">
-        <tr><th>機能 ID</th><td>D103</td></tr>
-        <tr><th>機能名</th><td>処置確定機能</td></tr>
-        <tr><th>アクター</th><td>医師</td></tr>
-        <tr><th>事前条件</th><td>医師ロールのユーザーID でログインしていること。</td></tr>
-        <tr><th>事後条件</th><td></td></tr>
-        <tr>
-            <th>機能説明</th>
+<!-- OCR Page 16 -->
+<div>
+    <p>IS22-IMS-001(01)</p>
+    <table>
+        <tr><td>機能 ID:</td><td>D103</td></tr>
+        <tr><td>機能名:</td><td>処置確定機能</td></tr>
+        <tr><td>アクター</td><td>医師</td></tr>
+        <tr><td>事前条件</td><td>医師ロールのユーザーID でログインしていること。</td></tr>
+        <tr><td>事後条件</td><td></td></tr>
+        <tr><td>機能説明</td>
             <td>
                 <ol>
                     <li>薬投与指示機能・薬投与削除機能で表示される確認画面となる。</li>
@@ -1090,22 +873,21 @@
                 </ol>
             </td>
         </tr>
-        <tr><th>入出力</th><td></td></tr>
-        <tr><th>画面</th><td></td></tr>
-        <tr><th>帳票</th><td></td></tr>
-        <tr><th>データベース等</th><td></td></tr>
-        <tr><th>その他入出力</th><td>画面での入力:「薬剤選択画面へ戻る」「削除」「処置確定」ボタン。</td></tr>
-        <tr><th>備考</th><td></td></tr>
+        <tr><td>入出力</td><td></td></tr>
+        <tr><td>画面</td><td></td></tr>
+        <tr><td>帳票</td><td></td></tr>
+        <tr><td>データベース等</td><td></td></tr>
+        <tr><td>その他入出力</td><td>画面での入力:「薬剤選択画面へ戻る」「削除」「処置確定」ボタン。</td></tr>
+        <tr><td>備考</td><td></td></tr>
     </table>
 
-    <table class="function-def-table" style="margin-top:2em;">
-        <tr><th>機能 ID</th><td>D104</td></tr>
-        <tr><th>機能名</th><td>処置履歴確認機能</td></tr>
-        <tr><th>アクター</th><td>医師</td></tr>
-        <tr><th>事前条件</th><td>医師ロールのユーザーID でログインしていること。</td></tr>
-        <tr><th>事後条件</th><td></td></tr>
-        <tr>
-            <th>機能説明</th>
+    <table>
+        <tr><td>機能 ID:</td><td>D104</td></tr>
+        <tr><td>機能名:</td><td>処置履歴確認機能</td></tr>
+        <tr><td>アクター</td><td>医師</td></tr>
+        <tr><td>事前条件</td><td>医師ロールのユーザーID でログインしていること。</td></tr>
+        <tr><td>事後条件</td><td></td></tr>
+        <tr><td>機能説明</td>
             <td>
                 <ol>
                     <li>確認する患者のIDを指定する。</li>
@@ -1113,31 +895,29 @@
                 </ol>
             </td>
         </tr>
-        <tr><th>入出力</th><td></td></tr>
-        <tr><th>画面</th><td></td></tr>
-        <tr><th>帳票</th><td></td></tr>
-        <tr><th>データベース等</th><td></td></tr>
-        <tr><th>その他入出力</th><td>画面での入力:患者IDの入力。一覧表示後は「メニューに戻る」「患者IDを指定する」ボタン。</td></tr>
-        <tr><th>備考</th><td>該当患者に過去の処置履歴がない場合は、処置履歴がない旨の表示をする。</td></tr>
+        <tr><td>入出力</td><td></td></tr>
+        <tr><td>画面</td><td></td></tr>
+        <tr><td>帳票</td><td></td></tr>
+        <tr><td>データベース等</td><td></td></tr>
+        <tr><td>その他入出力</td><td>画面での入力:患者IDの入力。一覧表示後は「メニューに戻る」「患者IDを指定する」ボタン。</td></tr>
+        <tr><td>備考</td><td>該当患者に過去の処置履歴がない場合は、処置履歴がない旨の表示をする。</td></tr>
     </table>
 
     <h2>6. 画面設計</h2>
     <h3>6.1. 画面一覧</h3>
-    <p class="sub-item">・別途</p>
+    <p>・別途</p>
     <h3>6.2. 画面遷移図</h3>
-    <p class="sub-item">・別途</p>
+    <p>・別途</p>
     <h3>6.3. 画面定義</h3>
-    <p class="sub-item">・別途</p>
-    <div class="page-footer">
-        <span class="copyright">© 2022 HICS</span>
-        <span class="page-info">- 16 -</span>
-        <span></span>
-    </div>
+    <p>・別途</p>
+    <p>© 2022 HICS</p>
+    <p>- 16 -</p>
 </div>
+<hr>
 
-<!-- Page 17 -->
-<div class="page">
-    <div class="page-header">IS22-IMS-001(01)</div>
+<!-- OCR Page 17 -->
+<div>
+    <p>IS22-IMS-001(01)</p>
     <h2>7. 帳票設計</h2>
     <p>印刷帳票はないので割愛。</p>
 
@@ -1199,16 +979,14 @@
     <p>※略</p>
     <h3>9.2. システム制御コード</h3>
     <p>※略</p>
-    <div class="page-footer">
-        <span class="copyright">© 2022 HICS</span>
-        <span class="page-info">- 17 -</span>
-        <span></span>
-    </div>
+    <p>© 2022 HICS</p>
+    <p>- 17 -</p>
 </div>
+<hr>
 
-<!-- Page 18 -->
-<div class="page">
-    <div class="page-header">IS22-IMS-001(01)</div>
+<!-- OCR Page 18 -->
+<div>
+    <p>IS22-IMS-001(01)</p>
     <h2>10. 運用設計</h2>
     <p>省略</p>
 
@@ -1220,41 +998,25 @@
 
     <h2>13. 保守設計※</h2>
     <p>省略</p>
-    <div class="page-footer">
-        <span class="copyright">© 2022 HICS</span>
-        <span class="page-info">- 18 -</span>
-        <span></span>
-    </div>
+    <p>© 2022 HICS</p>
+    <p>- 18 -</p>
 </div>
+<hr>
 
-<!-- Page 19 -->
-<div class="page">
-    <div class="page-header">IS22-IMS-001(01)</div>
-    <div style="margin-top: 100px;">
-        <p class="center">医療機関向け</p>
-        <p class="center" style="font-size: 1.5em; font-weight: bold;">医師・受付・患者管理システム</p>
-        <p class="center" style="font-size: 1.2em;">基本設計書(IS22-IMS-001(01))</p>
-    </div>
-
-    <div style="margin-top: 50px;">
-        <p class="center">令和2年 4月13日 第1版発行</p>
-    </div>
-
-    <div style="margin-top: 50px;">
-        <p style="text-indent: 2em;">作成 : 株式会社ABC 開発事業部</p>
-        <p style="text-indent: 2em;">発行 : 株式会社ABC 開発事業部</p>
-    </div>
-
-    <div style="margin-top: 80px; text-align: right;">
-        <p>〒100-0013</p>
-        <p>東京都千代田区霞が関2-1-1</p>
-        <p>TEL (03)3500-0000(代表)</p>
-    </div>
-    <div class="page-footer">
-        <span class="copyright">© 2022 HICS</span>
-        <span class="page-info">- 19 -</span>
-        <span></span>
-    </div>
+<!-- OCR Page 19 -->
+<div>
+    <p>IS22-IMS-001(01)</p>
+    <p>医療機関向け</p>
+    <p>医師・受付・患者管理システム</p>
+    <p>基本設計書(IS22-IMS-001(01))</p>
+    <p>令和2年 4月13日 第1版発行</p>
+    <p>作成: 株式会社ABC 開発事業部</p>
+    <p>発行: 株式会社ABC 開発事業部</p>
+    <p>〒100-0013</p>
+    <p>東京都千代田区霞が関2-1-1</p>
+    <p>TEL (03)3500-0000(代表)</p>
+    <p>© 2022 HICS</p>
+    <p>- 19 -</p>
 </div>
 
 </body>
